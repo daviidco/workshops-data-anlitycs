@@ -19,7 +19,7 @@ def verificar_postgres(**kwargs):
     try:
         conn = psycopg2.connect(
             host="localhost",
-            database="datamart",
+            database="electiva",
             user="postgres",
             password="123abc"
         )
