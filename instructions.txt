@@ -1,0 +1,26 @@
+levantar jupyter
+~/projects/start_jupyter.sh
+
+
+levantar minio
+~/projects/minio/start_minio.sh
+http://localhost:9001
+user: 		minioadmin
+password:	minioadmin123
+
+
+
+levantar airflow
+activate virtualenvironment
+source ./projects/ebd_env/bin/activate
+airflow standalone
+
+probar conexion postgesql
+psql -h localhost -p 5432 -U postgres -d airflow_meta -c "SELECT version();"
+
+password: 123abc
+
+cat ~/airflow/simple_auth_manager_passwords.json.generated 
+{"admin": "mDNMzU4uX9akCC4A"}
+
+
