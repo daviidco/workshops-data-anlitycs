@@ -80,7 +80,7 @@ with DAG(
         bash_command="""
             source /home/david/projects/ebd_env/bin/activate && \
             cd /home/david/projects/notebooks && \
-            jupyter nbconvert --to notebook --execute 03_etl_postgres.ipynb \
+            jupyter nbconvert --to notebook --execute 02_etl_postgres.ipynb \
             --output 03_orquestado.ipynb
         """,
     )
