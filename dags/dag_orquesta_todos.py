@@ -68,7 +68,7 @@ with DAG(
     run_02 = BashOperator(
         task_id='ejecutar_notebook_02',
         bash_command="""
-            source /home/su_usuario/projects/ebd_env/bin/activate && \
+            source /home/david/projects/ebd_env/bin/activate && \
             cd /home/david/projects/notebooks && \
             jupyter nbconvert --to notebook --execute 02_etl_delta_intro.ipynb \
             --output 02_orquestado.ipynb
@@ -78,7 +78,7 @@ with DAG(
     run_03 = BashOperator(
         task_id='ejecutar_notebook_03',
         bash_command="""
-            source /home/su_usuario/projects/ebd_env/bin/activate && \
+            source /home/david/projects/ebd_env/bin/activate && \
             cd /home/david/projects/notebooks && \
             jupyter nbconvert --to notebook --execute 03_etl_postgres.ipynb \
             --output 03_orquestado.ipynb
@@ -88,7 +88,7 @@ with DAG(
     run_04 = BashOperator(
         task_id='ejecutar_notebook_04',
         bash_command="""
-            source /home/su_usuario/projects/ebd_env/bin/activate && \
+            source /home/david/projects/ebd_env/bin/activate && \
             cd /home/david/projects/notebooks && \
             jupyter nbconvert --to notebook --execute 04_minio_data_lake.ipynb \
             --output 04_orquestado.ipynb
